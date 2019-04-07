@@ -52,6 +52,16 @@ Follow these steps to set up the project in development mode
   yarn run start
   ```
   The application should now be running at `http://localhost:8080`
+  
+  - You can generate random meal id by the endpoint 
+  ```
+  http://localhost:8080/api/v1/meals
+  ```
+   - To get the meal id for the meal with the least ingredent 
+  ```
+ http://localhost:8080/api/v1/meals/52774,52902,52882
+  ```
+  
 
 ### Run the Service Using Docker
 
@@ -70,4 +80,8 @@ To cleanup all the containers + volumes: `make clean`
 ## Deployment
 
 TODO - add deployment commands
+
+## Sample
+
+
 
