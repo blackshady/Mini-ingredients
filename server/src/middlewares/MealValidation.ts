@@ -12,7 +12,6 @@ class MealValidation{
             });
     }
 
-
 }
 
 export default MealValidation;
