@@ -5,7 +5,23 @@
   ],
   "jsRules": {},
   "rules": {
-    "trailing-comma": [ false ]
+    "trailing-comma": [ false ],
+    "import-name": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements"
+    ]
   },
   "rulesDirectory": []
 }
+
