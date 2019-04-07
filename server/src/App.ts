@@ -6,14 +6,14 @@ import routes from './routes/Route';
 
 class App {
 
-    constructor(){
+    public app: express.Application;
+
+    constructor() {
         this.app = express();
         this.config();
         this.routes();
         dotenv.config();
     }
-
-    public app: express.Application;
 
     private config(): void {
         this.app.use(morgan('combined'));
@@ -23,7 +23,7 @@ class App {
     }
 
     private routes(): void {
-        this.app.use('/', routes)
+        this.app.use('/', routes);
     }
 
 }

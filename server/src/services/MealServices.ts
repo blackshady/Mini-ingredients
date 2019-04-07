@@ -6,9 +6,9 @@ const { MealDBBaseURL } = appConstant;
 
 class MealServices {
 
-        private baseURL:string;
+        private baseURL: string;
 
-        constructor(){
+        constructor() {
             this.baseURL = MealDBBaseURL;
         }
 
@@ -16,22 +16,22 @@ class MealServices {
      * Meal services that get meal by ID
      * @param id
      */
-    public async getById(id:number):Promise<any>{
+    public async getById(id: number): Promise<any> {
         try {
             return await axios.get( `${this.baseURL}/lookup.php?i=${id}`);
         } catch (error) {
-            Logger.info(error)
+            Logger.info(error);
         }
     }
 
     /**
      * Meal services that get random meal
      */
-    public async getRandomMeal():Promise<any>{
+    public async getRandomMeal(): Promise<any> {
             try {
                 return await axios.get( `${this.baseURL}/random.php`);
             } catch (error) {
-               Logger.info(error)
+               Logger.info(error);
             }
 
     }

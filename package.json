@@ -1,0 +1,52 @@
+{
+  "name": "Mini-ingredients",
+  "version": "1.0.0",
+  "description": "This is a simple recipe API that returns the meal Id with the minimum ingredients when queried with the list of meal Id ",
+  "main": "index.js",
+  "repository": "https://github.com/blackshady/Mini-ingredients.git",
+  "author": "Victor Chibuike",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "build": "tsc",
+    "lint:ts": "tslint -c tslint.json -p tsconfig.json --fix",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon './dist/bin/Server.js' --watch './dist'",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "start": "npm-run-all clean build --parallel watch:build watch:server --print-label",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/morgan": "^1.7.35",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.4.0",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.0",
+    "@babel/preset-env": "7.4.1",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/dotenv": "^6.1.1",
+    "@types/fs-extra": "^5.0.5",
+    "@types/node": "^11.13.0",
+    "@types/shelljs": "^0.8.4",
+    "dotenv": "^7.0.0",
+    "fs-extra": "^7.0.1",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.1"
+  }
+}

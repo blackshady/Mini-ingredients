@@ -1,20 +1,20 @@
-import express, { Router, Request, Response } from 'express';
+import express, { Request, Response, Router } from 'express';
 import Meal from '../controllers/Meal';
 import MealValidation from '../middlewares/MealValidation';
 
 class  Route {
 
-    private meal:Meal;
+    public router: express.Router;
+
+    private meal: Meal;
 
     /**
      * Initialize express router
      */
-    constructor(){
+    constructor() {
         this.router = Router();
         this.init();
     }
-
-    public router:express.Router;
 
     /**
      * Catch all routes
@@ -27,9 +27,9 @@ class  Route {
         });
     }
 
-    private init(){
+    private init() {
         this.meal = new Meal();
-        const arr = [MealValidation.validateReq, this.meal.getLeastIngredentId];
+        const arr = [MealValidation.validateReq, this.meal.getLeastIngredientId];
         this.router.get('/api/v1/meals', this.meal.getRandomId);
         this.router.get('/api/v1/meals/:mealId', ...arr);
         this.router.use('/**', this.catchAllRoutes);
