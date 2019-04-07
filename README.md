@@ -43,24 +43,28 @@ Follow these steps to set up the project in development mode
 
 - Run `cd Mini-ingredients` to enter the application's directory
 - Install the application's dependencies by running the command
-  ```
+  ```[bash]
   yarn install
   ```
 - Create a `.env` file in the root of your directory using the `.env.example` file in the repository
 - Start the application by running
-  ```
+
+  ```[bash]
   yarn run start
   ```
   The application should now be running at `http://localhost:8080`
   
   - You can generate random meal id by the endpoint 
-  ```
+  
+  ```[bash]
   http://localhost:8080/api/v1/meals
   ```
+  
    - To get the meal id for the meal with the least ingredent 
-  ```
+   
+ ```[bash]
  http://localhost:8080/api/v1/meals/52774,52902,52882
-  ```
+ ```
   
 
 ### Run the Service Using Docker
